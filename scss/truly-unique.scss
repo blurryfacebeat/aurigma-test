@@ -1,3 +1,100 @@
 .truly-unique {
+  margin-bottom: 182px;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__info {
+    max-width: 500px;
+    margin-right: 125px;
+
+    &__title {
+      margin-bottom: 25px;
+
+      font-weight: 700;
+      color: $light-black;
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    &__text {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 26px;
+      color: $middle-grey;
+    }
+  }
+
+  &__img {
+    img {
+      width: 496px;
+      height: 434px;
+
+      transition: all 0.2s ease;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .truly-unique {
+    margin-bottom: 160px;
+
+    &__info {
+      max-width: 390px;
+      margin-right: 115px;
   
+      &__title {
+        margin-bottom: 25px;
+      }
+    }
+  
+    &__img {
+      img {
+        width: 400px;
+        height: 350px;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .truly-unique {
+    margin-bottom: 80px;
+
+    &__inner {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__info {
+      order: 1;
+      max-width: auto;
+      margin-right: 0;
+  
+      &__title {
+        margin-bottom: 25px;
+
+        font-size: 32px;
+        line-height: 40px;
+      }
+    }
+  
+    &__img {
+      order: 0;
+      margin-bottom: 56px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .truly-unique {
+    &__img {
+      img {
+        width: 257px;
+        height: 225px;
+      }
+    }
+  }
 }

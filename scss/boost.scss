@@ -1,14 +1,18 @@
 .boost {
   margin-bottom: 120px;
 
+  &__title {
+    margin-bottom: 106px;
+  }
+
   &__content {
     display: flex;
+    align-items: center;
     justify-content: center;
   }
 
   &__img {
     margin-right: 120px;
-    margin-top: 78px;
 
     img {
       width: 508px;
@@ -19,10 +23,10 @@
   }
   
   &__item {
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 
     &__title {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
 
       font-weight: 700;
       color: $light-black;
@@ -30,7 +34,7 @@
     }
 
     &__text {
-      max-width: 390px;
+      max-width: 498px;
 
       font-weight: 400;
       line-height: 24px;
@@ -42,6 +46,10 @@
 
 @media (max-width: 1024px) {
   .boost {
+    &__title {
+      margin-bottom: 48px;
+    }
+
     &__img {
       img {
         width: 410px;
