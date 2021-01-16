@@ -1,0 +1,54 @@
+.footer {
+  border-top: 1px solid #DDDDDD;
+
+  &__inner {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  &__copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__aurigma {
+      display: flex;
+      align-items: center;
+
+      .aurigma-logo {
+        margin-right: 30px;
+      }
+
+      .aurigma-copyright {
+        font-size: 12px;
+        font-weight: 400;
+        color: $dark-grey;
+
+        a {
+          padding-bottom: 3px;
+
+          color: $blue;
+
+          transition: all 0.2s ease;
+          border-bottom: 1px solid transparent;
+
+          &:hover {
+            color: $blue-active;
+            border-color: $blue-active;
+          }
+        }
+      }
+    }
+
+    &__logotypes {
+      display: flex;
+      align-items: center;
+
+      .copyright__logotypes__img {
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+}

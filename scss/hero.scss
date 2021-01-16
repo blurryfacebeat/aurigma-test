@@ -26,7 +26,12 @@
       }
 
       .hero__btn {
-        padding: 12px 32px;
+        width: max-content;
+        padding: 0 32px;
+        height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         font-size: 16px;
         line-height: 24px;
@@ -96,14 +101,6 @@
         .hero__text {
           max-width: 390px;
           margin-bottom: 30px;
-        }
-  
-        .hero__btn {
-          padding: 12px 32px;
-  
-          font-size: 16px;
-          line-height: 24px;
-          letter-spacing: 1px;
         }
       }
 
