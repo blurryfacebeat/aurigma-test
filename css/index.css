@@ -121,7 +121,8 @@ ul {
 
 .header {
   margin-bottom: 42px;
-  border-bottom: 1px solid #DDDDDD; }
+  border-bottom: 1px solid #DDDDDD;
+  z-index: 10; }
   .header .container {
     max-width: none; }
     .header .container .header__inner {
