@@ -16,6 +16,21 @@
   color: $light-grey;
 }
 
+.icon-arrow-bottom {
+  display: none;
+
+  font-size: 9px;
+  color: $grey;
+
+  transition: all 0.2s ease;
+}
+
+@media (max-width: 490px) {
+  .icon-arrow-bottom {
+    display: block;
+  }
+}
+
 @media (max-width: 320px) {
   .icon-search {
     color: $light-grey;

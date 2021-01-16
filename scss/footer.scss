@@ -6,6 +6,81 @@
     padding-bottom: 60px;
   }
 
+  &__links {
+    display: flex;
+    margin-bottom: 24px;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+
+      &:not(:last-child) {
+        margin-right: 44px;
+      }
+
+      .footer__links__checkbox {
+        display: none;
+        width: 0;
+        height: 0;
+
+        pointer-events: none;
+      }
+
+      .footer__links__header {
+        display: block;
+
+        font-size: 14px;
+        font-weight: 500;
+        color: $grey;
+
+        pointer-events: none;
+      }
+
+      .footer__links__items {
+        display: flex;
+        flex-direction: column;
+        max-width: 190px;
+
+        .footer__links__item {
+          &:first-child {
+            margin-top: 17px;
+          }
+
+          &:not(:last-child) {
+            margin-bottom: 12px;
+          }
+
+          .footer__links__link {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            color: $middle-grey;
+
+            transition: all 0.2s ease;
+
+            &:hover {
+              color: $blue;
+            }
+          }
+
+          .footer__links__new {
+            padding: 3px 4px 2px 4px;
+            margin-left: 7px;
+            display: inline-block;
+
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 10px;
+
+            background-color: $blue;
+            transform: translateY(-2px);
+            border-radius: 3px;
+          }
+        }
+      }
+    }
+  }
+
   &__copyright {
     display: flex;
     justify-content: space-between;
@@ -23,6 +98,13 @@
         font-size: 12px;
         font-weight: 400;
         color: $dark-grey;
+
+        .aurigma-inc {
+          &::before {
+            content: "2019";
+            margin-right: 4px;
+          }
+        }
 
         a {
           padding-bottom: 3px;
@@ -47,6 +129,129 @@
       .copyright__logotypes__img {
         &:not(:last-child) {
           margin-right: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    &__links {
+      &__container {
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+
+        .footer__links__items {
+          max-width: 161px;
+
+          .footer__links__item {
+            &:not(:last-child) {
+              margin-bottom: 25px;
+            }
+
+            .footer__links__new {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 490px) {
+  .footer {
+    &__inner {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    &__links {
+      flex-direction: column;
+      margin-bottom: 55px;
+
+      &__container {
+        &:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 35px;
+        }
+
+        .footer__links__checkbox {
+          pointer-events: auto;
+
+          &:checked ~ .footer__links__items {
+            display: flex;
+            animation: emergence 0.5s ease;
+          }
+
+          &:checked + .footer__links__header .icon-arrow-bottom {
+            transform: rotate(180deg);
+          }
+        }
+  
+        .footer__links__header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+  
+          pointer-events: auto;
+        }
+
+        .footer__links__items {
+          max-width: none;
+          display: none;
+
+          .footer__links__item {
+            &:first-child {
+              margin-top: 30px;
+            }
+
+            &:not(:last-child) {
+              margin-bottom: 25px;
+            }
+          }
+        }
+      }
+    }
+
+    &__copyright {
+      flex-direction: column;
+      align-items: flex-start;
+  
+      &__aurigma {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 25px;
+  
+        .aurigma-logo {
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
+  
+        .aurigma-copyright {
+          max-width: 190px;
+
+          line-height: 18px;
+
+          .aurigma-inc {
+            &::before {
+              content: "2001-2018";
+              margin-right: 3px;
+            }
+          }
+        }
+      }
+  
+      &__logotypes {
+        display: flex;
+        align-items: center;
+  
+        .copyright__logotypes__img {
+          &:not(:last-child) {
+            margin-right: 30px;
+          }
         }
       }
     }

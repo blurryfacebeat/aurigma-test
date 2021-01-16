@@ -47,10 +47,14 @@ ul {
 
   background-color: $blue;
   border-radius: 3px;
-  transition: background-color 0.2s ease-in;
+  transition: all 0.2s ease-in;
 
   &:hover {
     background-color: $blue-active;
+  }
+
+  &:active {
+    transform: scale(0.97);
   }
 }
 
