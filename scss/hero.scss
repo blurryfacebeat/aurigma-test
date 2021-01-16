@@ -1,3 +1,132 @@
 .hero {
+  margin-bottom: 200px;
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .hero__info {
+      .hero__title {
+        margin-bottom: 20px;
+
+        color: $light-black;
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 54px;
+      }
+
+      .hero__text {
+        max-width: 498px;
+        margin-bottom: 25px;
+
+        font-size: 18px;
+        line-height: 26px;
+        color: $middle-grey;
+      }
+
+      .hero__btn {
+        padding: 12px 32px;
+
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 1px;
+      }
+    }
+
+    .hero__img {
+      img {
+        height: 514px;
+        width: 514px;
+
+        transition: all 0.2s ease;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    margin-bottom: 178px;
+
+    &__inner {
+      .hero__info {
+        margin-right: 90px;
+
+        .hero__title {
+          max-width: 390px;
+          margin-bottom: 24px;
+        }
   
+        .hero__text {
+          max-width: 390px;
+          margin-bottom: 30px;
+        }
+      }
+
+      .hero__img {
+        img {
+          height: 415px;
+          width: 415px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .hero {
+    margin-bottom: 120px;
+
+    &__inner {
+      flex-direction: column;
+
+      .hero__info {
+        order: 1;
+        margin-right: 0;
+
+        .hero__title {
+          max-width: 390px;
+          margin-bottom: 24px;
+
+          font-size: 36px;
+          line-height: 44px;
+        }
+  
+        .hero__text {
+          max-width: 390px;
+          margin-bottom: 30px;
+        }
+  
+        .hero__btn {
+          padding: 12px 32px;
+  
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 1px;
+        }
+      }
+
+      .hero__img {
+        order: 0;
+        margin-bottom: 32px;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .hero {
+    &__inner {
+      .hero__img {
+        order: 0;
+        margin-bottom: 32px;
+    
+        img {
+          height: 265px;
+          width: 265px;
+        }
+      }
+    }
+  }
 }

@@ -22,6 +22,18 @@ ul {
   list-style: none;
 }
 
+.hidden {
+  transform: translateY(-500px) !important;
+  display: none !important;
+  opacity: 0 !important;
+}
+
+.show-flex {
+  transform: translateY(0) !important;
+  display: flex !important;
+  opacity: 1 !important;
+}
+
 .container {
   max-width: 1186px;
   padding-left: 20px;
@@ -39,5 +51,34 @@ ul {
 
   &:hover {
     background-color: $blue-active;
+  }
+}
+
+.section-title {
+  margin-bottom: 48px;
+
+  font-weight: 700;
+  text-align: center;
+  font-size: 36px;
+  color: $light-black;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 930px;
+  }
+}
+
+@media (max-width: 860px) {
+  .container {
+    max-width: none;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 800px) {
+  .section-title {
+    font-size: 32px;
   }
 }
