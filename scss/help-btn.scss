@@ -1,0 +1,31 @@
+.help-btn {
+  width: max-content;
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 450px) {
+  .help-btn {
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
